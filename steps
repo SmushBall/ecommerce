@@ -1,0 +1,135 @@
+Notes on building an ecommerce
+
+
+1. Technolog stack
+
+Node + Express for url backends
+
+mongodb + moongoose for DB 
+
+html/css/jquery for front end part
+
+------------------------
+
+Http basics
+
+it a protocol followed by all web applications
+
+some popular methods
+
+get - to retireve data from server. example we search for some keyword and server provides back with results/url
+
+post - to send data to server. example log in page where we put user id and pwd and send to server and server sends back a url
+
+put - almost same as post. only difference is, here the dats is updated. Example. changing phone number for twitter, server receives the recent and updates the data
+
+delete - to delete data from the server.
+
+---------------------
+
+Nodemon is a package which is used to track server file changes and automatically tracks and reboots server instead of running the server manually everytime. Changes in server are detected on the fly. Reduces manual effort to restart the server if there are some changes are server.
+
+Install using the below command 
+"node install nodemon -g"
+
+----------------------
+1.
+npm init
+
+initializes and creates package.json
+
+Package.json is a container which holds all of the library and dependency that is needed for the web application
+like express, mongoose etc.  
+
+
+2. create server.js file
+
+3. install express library 
+
+Use below command
+
+npm install express --save
+
+This will install the library and also a new folder node_modules will be created which will hold the library. 
+package.json will be updated
+
+4. then run server.js
+
+nodemon server.js
+
+------------------------
+
+example of routing Get method
+
+-------------------------
+
+adding logger for url
+we will use morgan library to log user request
+
+use middleware to run morgan
+
+npm install morgan --save
+
+Then run server with nodemon
+
+--------------------------------
+
+Mongoose - object relational mapper
+
+virtual object database. It connects node.js with mongodb
+we dont have to write code to connect that.
+
+create new folder models, which stores all the db schemas.
+schema is blueprint of db
+
+create user.js in models
+
+----
+
+user.js will require mongoose and bcrypt-nodejs
+
+bcrypt is a library to hash the password before saving it to the DB.
+
+no 12***
+
+------------
+
+pre is a method which fires before saving to DB
+
+GenSalt is a method to generate random data
+
+once you complete user.js
+
+-----------
+
+sign up for mongolab cloud service 500mb free
+
+create a db - give name ecommerce
+create a db user root/toor
+
+then copy the db url
+
+This will be needed in server.js
+in the url chnage the db username and password
+
+use mongoose to connect and then run the server with nodemon
+make sure mongoose is installed
+
+--------------
+
+postman software - to test routes or urls without creating full fledged web pages
+
+it is a chrome extension
+
+
+
+
+
+
+
+
+ 
+
+
+
+
